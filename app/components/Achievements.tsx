@@ -5,9 +5,9 @@ export default function Achievements() {
   return (
     <section id="achievements" className="border-t border-line py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionEyebrow index="05" label="Achievements" />
+        <SectionEyebrow index="01" label="Achievements" />
         <h2 className="text-balance mt-6 max-w-2xl font-display text-3xl font-semibold leading-tight tracking-tight text-cream sm:text-4xl">
-          Highlights from the last 6 years.
+          Impact & Achievements
         </h2>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">

@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section id="about" className="border-t border-line py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionEyebrow index="01" label="About" />
+        <SectionEyebrow index="02" label="About" />
 
         <div className="mt-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>

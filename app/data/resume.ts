@@ -310,10 +310,10 @@ export const achievements = [
 
 export const nav = [
   { label: "Home", href: "#home" },
+  { label: "Achievements", href: "#achievements" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Resume", href: "#resume" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];

@@ -64,7 +64,7 @@ export default function Services() {
       className="border-t border-line bg-ink-soft py-24 lg:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionEyebrow index="02" label="Services" />
+        <SectionEyebrow index="03" label="Services" />
         <h2 className="text-balance mt-6 max-w-2xl font-display text-3xl font-semibold leading-tight tracking-tight text-cream sm:text-4xl">
           What I can build for your product.
         </h2>
