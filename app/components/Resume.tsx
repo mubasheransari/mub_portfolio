@@ -5,7 +5,7 @@ export default function Resume() {
   return (
     <section id="resume" className="border-t border-line py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <SectionEyebrow index="04" label="Resume" />
             <h2 className="text-balance mt-6 max-w-xl font-display text-3xl font-semibold leading-tight tracking-tight text-cream sm:text-4xl">

@@ -35,7 +35,7 @@ export default function About() {
             </p>
           </div>
 
-          <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <dl className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {facts.map((f) => (
               <div
                 key={f.label}

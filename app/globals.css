@@ -82,3 +82,18 @@ table {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Mobile/tablet responsiveness: keep layouts from switching to compact multi-column
+   variants too early on Android devices with wider CSS viewports. */
+@media (max-width: 767px) {
+  html,
+  body {
+    min-width: 0;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

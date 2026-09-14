@@ -10,7 +10,7 @@ export default function Achievements() {
           Impact & Achievements
         </h2>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {achievements.map((group, i) => (
             <div
               key={group.label}

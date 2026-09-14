@@ -95,7 +95,7 @@ export default function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="grid gap-5 rounded-2xl border border-line bg-surface p-7 sm:grid-cols-2"
+            className="grid gap-5 rounded-2xl border border-line bg-surface p-7 md:grid-cols-2"
           >
             <Field
               label="Name"
@@ -110,7 +110,7 @@ export default function Contact() {
               value={form.email}
               onChange={handleChange}
             />
-            <div className="sm:col-span-2">
+            <div className="md:col-span-2">
               <label className="text-xs font-medium uppercase tracking-wide text-muted-2">
                 Message
               </label>
@@ -127,18 +127,18 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="sm:col-span-2 inline-flex w-fit items-center justify-center rounded-full bg-purple px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-purple-dim disabled:cursor-not-allowed disabled:opacity-60"
+              className="md:col-span-2 inline-flex w-fit items-center justify-center rounded-full bg-purple px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-purple-dim disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "sending" ? "Sending…" : "Send Message"}
             </button>
 
             {status === "success" && (
-              <p className="sm:col-span-2 text-sm font-medium text-green-400">
+              <p className="md:col-span-2 text-sm font-medium text-green-400">
                 Thanks — your message has been sent. I&apos;ll get back to you soon.
               </p>
             )}
             {status === "error" && (
-              <p className="sm:col-span-2 text-sm font-medium text-red-400">
+              <p className="md:col-span-2 text-sm font-medium text-red-400">
                 Something went wrong. Please fill out all fields, or email me
                 directly at {profile.email}.
               </p>

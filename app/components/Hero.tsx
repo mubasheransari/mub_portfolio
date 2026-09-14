@@ -161,7 +161,7 @@ export default function Hero() {
             {profile.summary}
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
             <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
@@ -187,11 +187,11 @@ export default function Hero() {
           </div>
 
           {/* Stat row with dividers */}
-          <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-8 sm:grid-cols-4">
+          <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-8 md:grid-cols-4">
             {stats.map((s, i) => (
               <div
                 key={s.label}
-                className={`min-w-0 ${i > 0 ? "sm:border-l sm:border-line sm:pl-6" : ""}`}
+                className={`min-w-0 ${i > 0 ? "md:border-l md:border-line md:pl-6" : ""}`}
               >
                 <dt className="font-mono text-2xl font-bold text-cream sm:text-3xl">
                   {s.value}

@@ -6,7 +6,7 @@ export default function FocusAreas() {
   return (
     <section className="border-t border-line bg-ink-soft py-16 lg:py-20">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {focusAreas.map((area, i) => (
             <div
               key={area.title}
