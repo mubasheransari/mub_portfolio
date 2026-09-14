@@ -9,6 +9,9 @@ import {
   SiNodedotjs,
   SiAppium,
   SiGit,
+  SiFirebase,
+  SiTestin,
+  SiAib,
 } from "react-icons/si";
 import { FaDatabase, FaBrain } from "react-icons/fa6";
 
@@ -18,9 +21,11 @@ const techStack = [
   { Icon: SiApple, label: "iOS", color: "#F5F5F7" },
   { Icon: SiAppstore, label: "App Store Connect", color: "#0D96F6" },
   { Icon: SiGoogleplay, label: "Play Store Console", color: "#4285F4" },
+  { Icon: SiFirebase, label: "Firebase", color: "#4285F4" },
   { Icon: FaDatabase, label: "Oracle", color: "#F80000" },
   { Icon: SiNextdotjs, label: "Next.js", color: "#F5F5F7" },
   { Icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
+  { Icon: SiAib, label: " AI-Assisted Data Analysis", color: "#5FA04E" },
   { Icon: FaBrain, label: "AI Modules", color: "#10A37F" },
   { Icon: SiAppium, label: "Testing", color: "#EE376D" },
   { Icon: SiGit, label: "Git", color: "#F03C2E" },
