@@ -1,4 +1,30 @@
 import { profile, stats } from "../data/resume";
+import {
+  SiFlutter,
+  SiAndroid,
+  SiApple,
+  SiAppstore,
+  SiGoogleplay,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiAppium,
+  SiGit,
+} from "react-icons/si";
+import { FaDatabase, FaBrain } from "react-icons/fa6";
+
+const techStack = [
+  { Icon: SiFlutter, label: "Flutter", color: "#02569B" },
+  { Icon: SiAndroid, label: "Android", color: "#3DDC84" },
+  { Icon: SiApple, label: "iOS", color: "#F5F5F7" },
+  { Icon: SiAppstore, label: "App Store Connect", color: "#0D96F6" },
+  { Icon: SiGoogleplay, label: "Play Store Console", color: "#4285F4" },
+  { Icon: FaDatabase, label: "Oracle", color: "#F80000" },
+  { Icon: SiNextdotjs, label: "Next.js", color: "#F5F5F7" },
+  { Icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
+  { Icon: FaBrain, label: "AI Modules", color: "#10A37F" },
+  { Icon: SiAppium, label: "Testing", color: "#EE376D" },
+  { Icon: SiGit, label: "Git", color: "#F03C2E" },
+];
 
 export default function Hero() {
   return (
@@ -15,48 +41,137 @@ export default function Hero() {
         className="pointer-events-none absolute bottom-[-10%] left-[-5%] h-[320px] w-[320px] rounded-full bg-gold/10 blur-[110px]"
       />
 
-      <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium tracking-wide text-gold">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            Available for hire · {profile.location}
-          </span>
+      {/* Giant ghost background wordmark */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-16 select-none text-center font-display text-[22vw] font-bold leading-none text-cream/[0.04] lg:text-[11rem]"
+      >
+        Software Engineer
+      </div>
 
-          <h1 className="text-balance mt-6 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-cream sm:text-5xl lg:text-[3.2rem]">
-            I build <span className="text-purple">mobile apps</span>,
-            <br />
-            <span className="text-gold">web platforms</span> & AI-integrated
-            experiences.
-          </h1>
+      <div className="relative mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
+        {/* Phone mockup column */}
+        <div className="relative order-2 mx-auto w-full max-w-sm min-w-0 lg:order-1">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[320px]">
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-br from-purple/30 via-transparent to-gold/20 blur-2xl"
+            />
 
-          <p className="mt-6 max-w-xl text-balance text-base leading-7 text-muted sm:text-lg">
-            {profile.summary}
+            {/* Tilted phone frame */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-[74%] -rotate-6 rounded-[2rem] border-4 border-surface-2 bg-ink shadow-2xl shadow-black/50 transition-transform duration-500 hover:rotate-0">
+                <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-surface-2" />
+
+                <div className="space-y-3 px-4 py-5">
+                  <div className="flex items-center justify-between">
+                    <div className="h-2 w-14 rounded-full bg-cream/20" />
+                    <div className="h-6 w-6 rounded-full bg-purple/40" />
+                  </div>
+
+                  <div className="rounded-xl bg-gradient-to-br from-purple to-purple-dim p-3">
+                    <div className="h-2 w-16 rounded-full bg-white/40" />
+                    <div className="mt-2 h-2 w-10 rounded-full bg-white/25" />
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2">
+                    {["bg-teal/30", "bg-gold/30", "bg-purple/30"].map(
+                      (c, i) => (
+                        <div
+                          key={i}
+                          className={`aspect-square rounded-lg ${c}`}
+                        />
+                      ),
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    {[1, 2, 3].map((i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 rounded-lg bg-surface p-2"
+                      >
+                        <div className="h-6 w-6 shrink-0 rounded-md bg-surface-2" />
+                        <div className="h-2 w-full rounded-full bg-surface-2" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-around border-t border-surface-2 px-4 py-3">
+                  {[0, 1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className={`h-2 w-2 rounded-full ${
+                        i === 0 ? "bg-purple" : "bg-surface-2"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Floating badges */}
+            <span className="absolute -left-4 top-[-8px] rotate-[-6deg] rounded-full bg-ink px-4 py-2 text-xs font-medium text-cream shadow-lg shadow-black/30 border border-line">
+              Flutter Dev
+            </span>
+            <span className="absolute -right-6 top-24 rotate-[5deg] rounded-full bg-ink px-4 py-2 text-xs font-medium text-cream shadow-lg shadow-black/30 border border-line">
+              Mobile Architect
+            </span>
+            <span className="absolute -right-4 bottom-2 rotate-[-4deg] rounded-full bg-ink px-4 py-2 text-xs font-medium text-cream shadow-lg shadow-black/30 border border-line">
+              6+ yrs
+            </span>
+          </div>
+
+          {/* Tech stack chips — wraps naturally, no overlap risk at any width */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
+            {techStack.map(({ Icon, label, color }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-medium text-muted"
+              >
+                <Icon className="h-3.5 w-3.5 shrink-0" style={{ color }} aria-hidden />
+                {label}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Text column */}
+        <div className="order-1 min-w-0 lg:order-2">
+          <p className="flex items-center gap-2 text-sm text-muted">
+            <span>Hi 👋, I&apos;m</span>
+            <span
+              className="text-2xl leading-none text-purple"
+              style={{ fontFamily: "var(--font-script, cursive)" }}
+            >
+              {profile.name}
+            </span>
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Flutter", "Next.js / React", "Oracle APEX", "OpenAI API"].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-line bg-surface px-3.5 py-1.5 font-mono text-xs text-muted"
-                >
-                  {tag}
-                </span>
-              ),
-            )}
-          </div>
+          <h1 className="text-balance mt-4 break-words font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-cream sm:text-5xl lg:text-6xl">
+            {profile.role.split(" ").slice(0, -1).join(" ")}{" "}
+            <span className="text-purple">
+              {profile.role.split(" ").slice(-1)}
+            </span>
+            .
+          </h1>
+
+          <p className="mt-6 max-w-xl break-words text-base leading-7 text-muted sm:text-lg">
+            {profile.summary}
+          </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-purple px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-purple-dim"
+              className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
             >
-              Hire Me
+              Hire Me!
             </a>
             <a
               href={profile.resumeFile}
               download
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-cream transition-transform hover:-translate-y-0.5 hover:border-purple"
             >
               Download CV
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -71,82 +186,24 @@ export default function Hero() {
             </a>
           </div>
 
-          <dl className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt className="font-mono text-2xl font-semibold text-cream sm:text-3xl">
+          {/* Stat row with dividers */}
+          <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-8 sm:grid-cols-4">
+            {stats.map((s, i) => (
+              <div
+                key={s.label}
+                className={`min-w-0 ${i > 0 ? "sm:border-l sm:border-line sm:pl-6" : ""}`}
+              >
+                <dt className="font-mono text-2xl font-bold text-cream sm:text-3xl">
                   {s.value}
                 </dt>
-                <dd className="mt-1 text-xs leading-snug text-muted-2">
+                <dd className="mt-1 break-words text-xs leading-snug text-muted-2">
                   {s.label}
                 </dd>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
-
-        <CodeCard />
       </div>
     </section>
-  );
-}
-
-function CodeCard() {
-  return (
-    <div className="relative mx-auto w-full max-w-md">
-      <div
-        aria-hidden
-        className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-purple/25 via-transparent to-gold/15 blur-2xl"
-      />
-      <div className="overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl shadow-black/40">
-        <div className="flex items-center gap-2 border-b border-line bg-surface-2 px-4 py-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
-          <span className="ml-3 font-mono text-xs text-muted-2">
-            mobile_app.dart
-          </span>
-        </div>
-
-        <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7">
-          <code>
-            <span className="text-muted-2">// Senior Flutter Developer</span>
-            {"\n"}
-            <span className="text-purple">class</span>{" "}
-            <span className="text-gold">MobileApp</span>{" "}
-            <span className="text-muted">extends</span>{" "}
-            <span className="text-teal">StatelessWidget</span> {"{"}
-            {"\n  "}
-            <span className="text-muted-2">
-              // 150,000+ downloads · 15+ apps
-            </span>
-            {"\n  "}
-            <span className="text-purple">final</span> stack = [{"\n    "}
-            <span className="text-gold">&apos;Flutter&apos;</span>,{" "}
-            <span className="text-gold">&apos;Swift&apos;</span>,{"\n    "}
-            <span className="text-gold">&apos;Kotlin&apos;</span>,{" "}
-            <span className="text-gold">&apos;Firebase&apos;</span>,{"\n  "}
-            ];
-            {"\n\n  "}
-            <span className="text-teal">@override</span>
-            {"\n  "}build(context) {"=>"} Scaffold(
-            {"\n    "}body: <span className="text-teal">Reliable</span>(),
-            {"\n  "}
-            );{"\n"}
-            {"}"}
-          </code>
-        </pre>
-
-        <div className="flex items-center justify-between border-t border-line bg-surface-2 px-5 py-3">
-          <span className="font-mono text-xs text-muted-2">
-            main.dart — build succeeded
-          </span>
-          <span className="inline-flex items-center gap-1.5 text-xs text-teal">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" />
-            0 errors
-          </span>
-        </div>
-      </div>
-    </div>
   );
 }

@@ -1,6 +1,6 @@
 export const profile = {
   name: "Mubashir Hasnain",
-  role: "Senior Flutter Developer",
+  role: "Full Stack Dev",
   tagline:
     "Mobile Apps · Web Development (Next.js/React) · Oracle Development · AI-Integrated Apps",
   location: "Karachi, Pakistan",
@@ -8,7 +8,7 @@ export const profile = {
   email: "mubashera38@gmail.com",
   resumeFile: "/Mubasher_Hasnain_Resume_KarachiMobileDev.pdf",
   summary:
-    "Mobile & full-stack developer with 6+ years shipping production apps on Android and iOS with Flutter, React Native, Swift, and Kotlin — plus web platforms in Next.js and React, low-code enterprise tools in Oracle APEX, and AI-integrated app features. I own products end-to-end, architecture through release, with 150,000+ combined downloads across 15+ shipped applications.",
+    "Mobile & full-stack developer with 6+ years shipping production apps on Android and iOS with Flutter, React Native plus web platforms in Next.js and React, low-code enterprise tools in Oracle APEX and AI-integrated app features. I own products end-to-end, architecture through release with 250,000+ combined downloads across 20+ shipped applications.",
 };
 
 export const focusAreas = [
@@ -16,7 +16,7 @@ export const focusAreas = [
     title: "Mobile App Development",
     description:
       "Native-feel Android & iOS apps built with Flutter, React Native, Swift and Kotlin — from architecture to App Store launch.",
-    tags: ["Flutter", "React Native", "Swift", "Kotlin"],
+    tags: ["Flutter", "React Native"],
   },
   {
     title: "Web Development",
@@ -40,9 +40,9 @@ export const focusAreas = [
 
 export const stats = [
   { value: "6+", label: "Years shipping mobile apps" },
-  { value: "150K+", label: "Combined app downloads" },
-  { value: "15+", label: "Production apps delivered" },
-  { value: "80%", label: "Crash-rate reduction (best case)" },
+  { value: "250K+", label: "Combined app downloads" },
+  { value: "20+", label: "Production apps delivered" },
+  { value: "90%", label: "Crash-rate reduction (best case)" },
 ];
 
 export const services = [

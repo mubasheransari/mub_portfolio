@@ -7,10 +7,11 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/caveat/600.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mubashir Hasnain — Senior Flutter Developer",
+  title: "Mubashir Hasnain — Full Stack Dev",
   description:
     "Mubashir Hasnain — Senior Flutter Developer & Mobile Architecture specialist. Flutter, React Native, Swift, Kotlin. 6+ years, 150,000+ combined app downloads.",
 };

@@ -60,7 +60,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionEyebrow index="06" label="Contact" />
         <h2 className="text-balance mt-6 max-w-2xl font-display text-3xl font-semibold leading-tight tracking-tight text-cream sm:text-4xl">
-          Have a mobile app to build? Let&apos;s talk.
+          Have a Software to build? Let&apos;s talk.
         </h2>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
