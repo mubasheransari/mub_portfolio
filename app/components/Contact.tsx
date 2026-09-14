@@ -72,16 +72,23 @@ export default function Contact() {
               <p className="text-xs font-medium uppercase tracking-wide text-muted-2">
                 Elsewhere
               </p>
-              <div className="mt-3 flex gap-3">
-                {["GitHub", "LinkedIn", "Twitter"].map((s) => (
-                  <span
-                    key={s}
-                    className="rounded-full border border-line px-4 py-2 text-xs text-muted"
-                    title="Add your profile link"
-                  >
-                    {s}
-                  </span>
-                ))}
+              <div className="mt-3 flex flex-wrap gap-3">
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line px-4 py-2 text-xs text-muted transition-colors hover:border-gold hover:text-gold"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line px-4 py-2 text-xs text-muted transition-colors hover:border-gold hover:text-gold"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>

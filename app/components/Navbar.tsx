@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { nav } from "../data/resume";
+import { nav, profile } from "../data/resume";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,10 +44,10 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <SocialIcon label="GitHub">
+          <SocialIcon label="GitHub" href={profile.github}>
             <path d="M8 0a8 8 0 00-2.53 15.59c.4.07.55-.17.55-.38v-1.35c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.16-.89-1.16-.72-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.71 1.23 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.14-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.55.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 008 0z" />
           </SocialIcon>
-          <SocialIcon label="LinkedIn">
+          <SocialIcon label="LinkedIn" href={profile.linkedin}>
             <path d="M3.6 1.3a1.6 1.6 0 11-3.2 0 1.6 1.6 0 013.2 0zM.3 5h3v9.7h-3V5zM6 5h2.9v1.3h.04c.4-.76 1.4-1.56 2.86-1.56 3.06 0 3.6 2 3.6 4.65v5.3h-3v-4.7c0-1.12-.02-2.56-1.56-2.56-1.56 0-1.8 1.22-1.8 2.48v4.78H6V5z" />
           </SocialIcon>
         </div>
@@ -120,14 +120,18 @@ export default function Navbar() {
 
 function SocialIcon({
   label,
+  href,
   children,
 }: {
   label: string;
+  href: string;
   children: React.ReactNode;
 }) {
   return (
     <a
-      href="#"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
       className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-purple hover:text-cream"
     >

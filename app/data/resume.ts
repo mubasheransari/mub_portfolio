@@ -7,6 +7,8 @@ export const profile = {
   phone: "+92 331 2025765",
   email: "mubashera38@gmail.com",
   resumeFile: "/Mubasher_Hasnain_Resume_KarachiMobileDev.pdf",
+  linkedin: "https://www.linkedin.com/in/mubasher-hasnain-a967a0120/",
+  github: "https://github.com/mubasheransari",
   summary:
     "Mobile & full-stack developer with 6+ years shipping production apps on Android and iOS with Flutter, React Native plus web platforms in Next.js and React, low-code enterprise tools in Oracle APEX and AI-integrated app features. I own products end-to-end, architecture through release with 250,000+ combined downloads across 20+ shipped applications.",
 };
