@@ -12,7 +12,12 @@ const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 type Status = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [status, setStatus] = useState<Status>("idle");
 
   function handleChange(
@@ -22,10 +27,19 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    if (!form.name || !form.email || !form.message) {
+    // 👇 paste it here
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error(
+        "Missing EmailJS env vars. Check .env.local has no CRLF line endings and restart the dev server."
+      );
+      setStatus("error");
+      return;
+    }
+
+    if (!form.name || !form.email || !form.subject || !form.message) {
       setStatus("error");
       return;
     }
@@ -37,15 +51,16 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          reply_to: form.email,
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
           message: form.message,
         },
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
 
       setStatus("success");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
       console.error("EmailJS error:", err);
       setStatus("error");
@@ -110,6 +125,14 @@ export default function Contact() {
               value={form.email}
               onChange={handleChange}
             />
+            <div className="md:col-span-2">
+              <Field
+                label="Subject"
+                name="subject"
+                value={form.subject}
+                onChange={handleChange}
+              />
+            </div>
             <div className="md:col-span-2">
               <label className="text-xs font-medium uppercase tracking-wide text-muted-2">
                 Message
