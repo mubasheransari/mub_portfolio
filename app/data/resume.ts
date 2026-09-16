@@ -6,7 +6,7 @@ export const profile = {
   location: "Karachi, Pakistan",
   phone: "+92 331 2025765",
   email: "mubashera38@gmail.com",
-  resumeFile: "/Mubasher_Hasnain_Resume_KarachiMobileDev.pdf",
+  resumeFile: "/Mubashir_Hasnain_Resume.pdf",
   linkedin: "https://www.linkedin.com/in/mubasher-hasnain-a967a0120/",
   github: "https://github.com/mubasheransari",
   summary:
