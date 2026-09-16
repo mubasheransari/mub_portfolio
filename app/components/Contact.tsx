@@ -142,7 +142,7 @@ async function handleSubmit(e: FormEvent<HTMLFormElement>) {
                 rows={5}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project…"
+                placeholder="Tell me about your project…t"
                 className="mt-2 w-full resize-none rounded-xl border border-line bg-surface-2 px-4 py-3 text-sm text-cream placeholder:text-muted-2 focus:border-purple focus:outline-none"
               />
             </div>
