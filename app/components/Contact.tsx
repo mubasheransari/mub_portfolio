@@ -133,7 +133,7 @@ async function handleSubmit(e: FormEvent<HTMLFormElement>) {
                 onChange={handleChange}
               />
             </div>
-            <div className="md:col-span-2">
+            <div className="md:col-span-2" > 
               <label className="text-xs font-medium uppercase tracking-wide text-muted-2">
                 Message
               </label>
